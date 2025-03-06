@@ -1,0 +1,12 @@
+
+
+services:
+  fprime:
+    build: .
+    container_name: fprime-bootstrap
+    volumes:
+      - .:/app
+    ports:
+      - "50050:50050"
+    stdin_open: true  # enables interactive mode
+    tty: true
