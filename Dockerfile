@@ -15,7 +15,6 @@ WORKDIR /app
 RUN pip install --upgrade pip \
     && pip install --upgrade setuptools \
     && pip install fprime-tools fprime-gds fprime-bootstrap\
-  # && pip install -r /app/MyProject/lib/fprime/requirements.txt\
     && git config --global --add safe.directory '*'
 
 # Expose default port used by F' GDS
