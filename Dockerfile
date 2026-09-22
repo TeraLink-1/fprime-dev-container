@@ -29,8 +29,8 @@ ENV SDKMAN_DIR="/root/.sdkman" \
 
 RUN curl -s "https://get.sdkman.io" | bash \
     && source "$SDKMAN_DIR/bin/sdkman-init.sh" \
-    && sdk install java $(sdk list java | grep -o "\b8\.[0-9]*\.[0-9]*\-tem" | head -1) \
-    && sdk install sbt \
+    && sdk install java 8.0.502-tem \
+    && sdk install sbt 1.13.0 \
     && ln -s "$SDKMAN_DIR/candidates/sbt/current/bin/sbt"   /usr/local/bin/sbt \
     && ln -s "$SDKMAN_DIR/candidates/java/current/bin/java" /usr/local/bin/java
 
